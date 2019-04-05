@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LocationSensitiveAdApp</string>
+    <string name="google_maps_API_key">AIzaSyDdbdV7YzSwvZF4RHRY_XIzMNqatNNTd-k</string>
+</resources>
