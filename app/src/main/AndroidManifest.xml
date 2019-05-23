@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.main.locationsensitiveadapp">
+    package="com.main.locationsensitivesuggestionapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -16,13 +17,14 @@
         android:theme="@style/AppTheme">
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDdbdV7YzSwvZF4RHRY_XIzMNqatNNTd-k"/>
-
-
-        <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <!--
+             The API key for Google Maps-based APIs.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyATbjY4Fr6FUkEGCpKaQwfMdGJF4AHe0tM" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -31,7 +33,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MapActivity"/>
+        <activity android:name=".MapsActivityCurrentPlace">
+
+        </activity>
     </application>
 
 </manifest>
